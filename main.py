@@ -254,7 +254,7 @@ def get_prompt_and_respond(user_message: str) -> str:
     try:
         # 打包傳送給 Gemini (使用推薦的 gemini-2.5-flash 模型)
         response = gemini_client.models.generate_content(
-            model='gemini-2.5-flash',
+            model='gemini-2.5-pro',
             contents=user_message,
             config=types.GenerateContentConfig(
                 system_instruction=system_instruction,
